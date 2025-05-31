@@ -53,7 +53,7 @@ Ensure that your local Kubernetes cluster is running inside the Vagrant box.
 
 ### 3. Configure Terraform Cloud Credentials
 
-Inside the Vagrant box, login with Terraform Cloud API token to connect local PC to Terraform Cloud:
+Inside the Vagrant box, login with Terraform Cloud API token to authenticate to Terraform Cloud:
 
 ```
 terraform login
