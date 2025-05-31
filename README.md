@@ -34,15 +34,16 @@ Each microservice is mapped to a separate Terraform Cloud workspace:
 
 ### 1. Clone the Repo
 
-```bash
-git clone https://github.com/eieiphyoaung/terraforming-bookinfo-microservices.git
-cd terraforming-bookinfo-microservices
+```git clone https://github.com/eieiphyoaung/terraforming-bookinfo-microservices.git```
+```cd terraforming-bookinfo-microservices```
 
 ### 2. Start the Vagrant Box (Local K8s Cluster)
 
-```bash
-vagrant up
-vagrant ssh
+
+```vagrant up```
+
+```vagrant ssh```
+
 
 **Ensure that your local Kubernetes cluster is running inside the Vagrant box.
 
@@ -51,23 +52,22 @@ vagrant ssh
 
 Inside the Vagrant box, login with Terraform Cloud API token to connect local PC to Terraform Cloud:
 
-```bash
-terraform login
+```terraform login```
 
 
 ### 4. Deploy Each Microservice
 
 Navigate to the respective microservice directory and initialize/apply:
 
-```bash
-cd namespace/
-terraform init
-terraform apply -auto-approve
+```cd namespace/```
+
+```terraform init```
+
+```terraform apply -auto-approve```
 
 Repeat this for each microservice directory: productpage/, details/, reviews/, ratings/.
 
-
-📂 Directory Structure
+ ###  📂 Directory Structure
 
 terraforming-bookinfo-microservices/
 ├── namespace/
@@ -77,15 +77,15 @@ terraforming-bookinfo-microservices/
 ├── ratings/
 └── README.md
 
-📘 Notes
+### 📘 Notes
 
 - Be sure your .kube/config is valid inside the Vagrant environment.
 - Destroy or update resources by working with the appropriate Terraform Cloud workspace.
 
-🧼 Cleanup
+### 🧼 Cleanup
 To destroy resources from a microservice:
 
-```terraform destroy -auto-approve
+```terraform destroy -auto-approve```
 
 Or destroy all workspaces from Terraform Cloud UI before deleting.
 
